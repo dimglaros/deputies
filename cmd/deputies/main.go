@@ -23,7 +23,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	err = db.AutoMigrate(&d.Teacher{}, &d.Application{})
+	err = db.AutoMigrate(&d.Teacher{}, &d.Application{}, &d.Vacancy{}, &d.School{}, &d.Division{})
 	if err != nil {
 		panic(err.Error())
 	}
