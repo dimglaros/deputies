@@ -1,0 +1,4 @@
+
+p, teacher, /user/:id, GET|PUT
+
+
