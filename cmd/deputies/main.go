@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	d "github.com/dimglaros/deputies/pkg/db"
+	"github.com/dimglaros/deputies/pkg/models"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -23,7 +23,7 @@ func main() {
 		panic(err.Error())
 	}
 
-	err = db.AutoMigrate(&d.Teacher{}, &d.Application{}, &d.Vacancy{}, &d.School{}, &d.Division{})
+	err = db.AutoMigrate(&models.Teacher{}, &models.Application{}, &models.School{}, &models.Vacancy{}, &models.Division{}, &models.Credentials{}, &models.DivisionSelection{})
 	if err != nil {
 		panic(err.Error())
 	}
